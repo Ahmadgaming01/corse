@@ -1,0 +1,13 @@
+<h1>Corse list</h1>
+
+<div class="container">
+    {% for course in corse_list %}
+        <h2>{{course.name}}</h2>
+        
+        <img src="{{course.image.url}}" alt="corse image">
+        {{course.video.url}}
+        <p>{{course.created_at}}</p>
+        <p>{{course.price}}</p>
+        <h3>{{course.category}}</h3>
+    {% endfor %}
+</div>
