@@ -4,5 +4,5 @@ app_name = 'corses'
 
 urlpatterns = [
     path ('' , re_corse_list ),
-    path ('/corse/<int:corse_id>/detail' , re_corse_detail )
+    path ('corse/<int:corse_id>/detail' , re_corse_detail )
 ]
