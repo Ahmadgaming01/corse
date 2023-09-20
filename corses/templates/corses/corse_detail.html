@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block body %}
+      
+
+<h1 class="text-center">Corse detail</h1>
+
+<div class="container  bg-secondary">
+    <h3 class = "text-center"> category :{{corse_detail.category}}</h3>
+
+    <div class="row ">    
+        <h2>{{corse_detail.name}}</h2>
+        <img src="{{corse_detail.image.url}}" alt="corse image" class = "text-center img-fluid ">
+        <p class="text-start"> date :{{corse_detail.created_at}}</p>
+        <p class="text-start"> price :{{corse_detail.price}}</p>
+        <p class="text-start"> description :{{corse_detail.description}}</p>
+        
+    </div>
+    
+    
+</div>
+
+{% endblock body %}

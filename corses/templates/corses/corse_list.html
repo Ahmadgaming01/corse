@@ -1,13 +1,28 @@
-<h1>Corse list</h1>
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block body %}
+      
+
+<h1 class="text-center">Corse list</h1>
 
 <div class="container">
+    <div class="row">
+        <h3>{{corse_list.category}}</h3>
     {% for course in corse_list %}
+    <div class="col-lg-4 pt-5 bg-light">
+    
         <h2>{{course.name}}</h2>
-        
         <img src="{{course.image.url}}" alt="corse image">
         {{course.video.url}}
-        <p>{{course.created_at}}</p>
-        <p>{{course.price}}</p>
-        <h3>{{course.category}}</h3>
+        <p> date :{{course.created_at}}</p>
+        <p> price :{{course.price}}</p>
+        
+    </div>
     {% endfor %}
+    </div>
 </div>
+
+{% endblock body %}
