@@ -11,3 +11,10 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model=Category
         fields = '__all__'
+
+
+class CategoryDetailSerializer(serializers.ModelSerializer):
+    corses =CorseSerializer (source = 'category_corse'  ,many=True)
+    class Meta:
+        model = Category
+        fields = '__all__'
